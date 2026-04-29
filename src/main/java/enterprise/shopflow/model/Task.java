@@ -1,4 +1,18 @@
-package enterprise.shopflow.model;
+package main.java.enterprise.shopflow.model;
 
+import jakarta.persistence.*;
+import lombok.Data;
+import java.time.LocalDateTime;
+
+@Entity
+@Data
 public class Task {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String title;
+    private String description;
+    private String status; // e.g., PENDING, COMPLETED
+    private LocalDateTime createdAt = LocalDateTime.now();
 }
