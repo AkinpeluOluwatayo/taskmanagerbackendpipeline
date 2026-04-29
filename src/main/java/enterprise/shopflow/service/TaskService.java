@@ -1,4 +1,4 @@
-package main.java.enterprise.shopflow.service;
+package enterprise.shopflow.service;
 
 import enterprise.shopflow.model.Task;
 import enterprise.shopflow.repository.TaskRepository;
@@ -19,16 +19,16 @@ public class TaskService {
         return taskRepository.findAll();
     }
 
-    // Logic to save a task with a business rule
+
     public Task saveTask(Task task) {
-        // Business Rule: If status is empty, default it to PENDING
+
         if (task.getStatus() == null || task.getStatus().isEmpty()) {
             task.setStatus("PENDING");
         }
         return taskRepository.save(task);
     }
 
-    // Logic to find a specific task
+
     public Optional<Task> getTaskById(Long id) {
         return taskRepository.findById(id);
     }
