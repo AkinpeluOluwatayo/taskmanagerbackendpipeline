@@ -1,4 +1,4 @@
-package main.java.enterprise.shopflow.model;
+package enterprise.shopflow.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
