@@ -13,6 +13,6 @@ public class Task {
 
     private String title;
     private String description;
-    private String status; // e.g., PENDING, COMPLETED
+    private String status;
     private LocalDateTime createdAt = LocalDateTime.now();
 }
